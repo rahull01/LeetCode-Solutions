@@ -37,3 +37,25 @@ class Solution {
         }
     }
 }
+
+/* Using Recursion------->
+
+class Solution {
+    public void reverseString(char[] s) {
+        recur(s,0);
+    }
+     public void recur(char[] s, int index)
+     {
+        if(index == s.length/2)
+        
+            return;
+         recur(s,index+1);
+        swap(s,index,s.length-index-1);
+     }
+     public void swap(char[] s,int i,int j)
+     {
+        char temp = s[i];
+        s[i] = s[j];
+        s[j] = temp;
+     }
+}
